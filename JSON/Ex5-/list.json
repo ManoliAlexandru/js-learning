@@ -1,0 +1,20 @@
+{
+    "fullName": ["Manoli", "Alexandru", "Mihai"],
+    "birthday": "17.10.2000",
+    "phoneNumber": 37360637718,
+    "address": "str.Bulgara 166",
+    "email": "sasha-manoli@mail.ru",
+    "gender": "male",
+    "job": "web developer",
+    "startWorkData": "01.02.2020",
+    "IDNP": 1586985469853,
+    "salary": 4654,
+    "placeOfBirth": "Balti",
+    "workExperience": "0.02 года",
+    "department": "Js develper",
+    "homePhoneNumber": "025235518",
+    "workSchedule": {
+      "from": "07:56",
+      "to": "06:56"
+    }
+  }
