@@ -2,10 +2,9 @@ const input = document.querySelector("#mainInput");
 const container = document.querySelector("#container");
 
 input.addEventListener("blur", () => {
-  const parsed = Number(input.value);
-  if (isNaN(parsed)) {
+  if (isNaN(Number(input.value))) {
     input.value = "";
   } else {
-    container.innerText = parsed.toString();
+    container.innerText = input.value;
   }
 });

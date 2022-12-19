@@ -1,5 +1,5 @@
-let elem = document.querySelector("#elem");
-let previousElem = elem.previousElementSibling;
+const elem = document.querySelector("#elem");
+const previousElem = elem.previousElementSibling;
 
 previousElem.append("!");
 

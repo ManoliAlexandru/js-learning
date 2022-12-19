@@ -28,7 +28,7 @@ const render = () => {
 
 const addListeners = () => {
   submit.addEventListener("click", (e) => {
-    if (userInput.value.trim() !== "") {
+    if (userInput.value.trim()) {
       items.push(userInput.value.trim());
     }
     render();

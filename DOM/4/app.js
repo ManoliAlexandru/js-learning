@@ -9,6 +9,7 @@ const addItem = () => {
     name: mainInfoInput.value,
   });
 };
+
 const deleteItem = (position) => {
   infoStorage.splice(position, 1);
 };

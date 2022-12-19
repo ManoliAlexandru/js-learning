@@ -31,7 +31,7 @@ setInterval(() => {
   showNotification({
     bottom: 0,
     right: 0,
-    html: "I'm JavaScript " + i++,
+    html: `I'm JavaScript ${i++}`,
     className: "bye",
     timeout: 1500,
   });

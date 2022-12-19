@@ -12,7 +12,7 @@ const changeDocumentColor = (
     document.body.style.backgroundColor = secondBackgroundColor;
   }, timer);
 };
-changeDocumentColor("red", "yellow", 3000);
+changeDocumentColor("red", "violet", 3000);
 
 const changeColorBtn = document.getElementById("changeColor");
 

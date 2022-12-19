@@ -34,8 +34,6 @@ const observeIncrementButton = () => {
   }
 };
 
-
-
 observeIncrementButton();
 minusBtn.addEventListener("click", () => {
   decrement(1);
