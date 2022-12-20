@@ -11,10 +11,6 @@ const getUsersName = async (url) => {
   }
 };
 
-getUsersName(urlUsers).then((data) => {
-  createExpansionPanel(data);
-});
-
 const getData = async (url) => {
   try {
     const res = await fetch(url);
@@ -24,18 +20,14 @@ const getData = async (url) => {
   }
 };
 
-getData(urlPosts).then((data) => {
-  createCard(data);
-});
-
 const createExpansionPanel = (data) => {
-  data.forEach(({ name }) => {
+  data.forEach(({ name, id }) => {
     const panel = document.createElement("details");
     panel.innerHTML = `
     <summary>
       <h1>${name}</h1>
     </summary>
-    <div class="container"></div>
+    <div class="container" id="userId-${id}"></div>
     `;
     wrapper.append(panel);
   });
@@ -54,6 +46,16 @@ const createCard = (data) => {
       </div>
     </div>
     `;
-    document.querySelector(".container").append(element);
+    document.querySelector(`#userId-${userId}`).append(element);
   });
 };
+
+const processData = async () => {
+  const usersName = await getUsersName(urlUsers);
+  createExpansionPanel(usersName);
+
+  const posts = await getData(urlPosts);
+  createCard(posts);
+};
+
+processData();
