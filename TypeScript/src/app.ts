@@ -1,6 +1,15 @@
 const urlPosts: string = "https://jsonplaceholder.typicode.com/posts";
 const urlUsers: string = "https://jsonplaceholder.typicode.com/users";
-const wrapper = document.querySelector(".wrapper")!;
+const wrapper = document.querySelector(".wrapper");
+
+interface Data {
+  name: string,
+  id: number,
+}
+
+interface CardData {
+
+}
 
 const getUsersName = async (url: string) => {
   try {
@@ -20,8 +29,8 @@ const getData = async (url: string) => {
   }
 };
 
-const createExpansionPanel = (data) => {
-  data.forEach(({ name, id }) => {
+const createExpansionPanel = (data: Data[]) => {
+  data.forEach(({ name,id }) => {
     const panel = document.createElement("details");
     panel.innerHTML = `
     <summary>
@@ -33,7 +42,7 @@ const createExpansionPanel = (data) => {
   });
 };
 
-const createCard = (data) => {
+const createCard = (data: CardData[]) => {
   data.forEach(({ userId, id, title, body }) => {
     const element = document.createElement("div");
     element.classList.add("card");
